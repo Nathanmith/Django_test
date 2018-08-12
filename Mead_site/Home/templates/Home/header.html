@@ -14,52 +14,40 @@
 		  height:100%
 		}
 	</style>
+	
+	
 </head>
 
 <body class="body" style="background-color:#f6f6f6">
-	<div class="container-fluid" style="min-height:95%; ">
-		<div class="row">
-			  <div class="col-sm-2">
-				  <br>
-				  <center>
-					<img src="{% static 'Home/img/Logo.jpg' %}" class="responsive-img" style='max-height:100px;' alt="face">
-				  </center>
-			  </div>
-			  <div class="col-sm-10">
-				  <br>
-				  <center>
-				  <h3>Delicious Mead's for any occasion</h3>
-				  </center>
-			  </div>
-		</div><hr>
-
-		<div class="row">
-		  <div class="col-sm-2">
-		  <br>
-
-		  <br>
-		   <!-- Great, til you resize. -->
-			<div class="well bs-sidebar affix" id="sidebar" style="background-color:#fff">
-			<!--<div class="well bs-sidebar" id="sidebar" style="background-color:#fff">-->
-			  <ul class="nav nav-pills nav-stacked">
-				<li><a href='/'>Home</a></li>
-				<li><a href='/blog/'>Blog</a></li>
-				<li><a href='/contact/'>Contact</a></li>
-			  </ul>
-			</div> <!--well bs-sidebar affix-->
-		  </div> <!--col-sm-2-->
-		  <div class="col-sm-10">
-		  
-			<div class='container-fluid'>
-			<br><br>
-			   {% block content %}
-			   {% endblock %}	
-			</div>
-		  </div>
-		</div> 
+	
+	<div>
+	   <img src="{% static 'Home/img/Logo.jpg' %}" alt="Logo" style="width:250px;">	
 	</div>
+	
+	<nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
+		<ul class="navbar-nav">
+			<a class="navbar-brand" href="#">
+			<img src="{% static 'Home/img/Logo.jpg' %}" alt="Logo" style="width:40px;"></a>
+			<li class="nav-item">
+			<a class="nav-link" href="/">Home</a>
+			</li>
+			<li class="nav-item">
+			<a class="nav-link" href="/blog/">Blog</a>
+			</li>
+			<li class="nav-item">
+			<a class="nav-link disabled" href="#">Products</a>
+			</li>
+		</ul>
+	</nav>
+	
+	<div class='container-fluid'>
+	<br><br>
+	   {% block content %}
+	   {% endblock %}	
+	</div>
+
 	<footer>
-		<div class="container-fluid" style='margin-left:15px'>
+		<div class="container-fluid fixed-bottom" style='margin-left:15px'>
 			<p><a href="#" target="blank">Contact</a> | <a href="#" target="blank">LinkedIn</a> | <a href="#" target="blank">Twitter</a> | <a href="#" target="blank">Google+</a></p>
 		</div>
 	</footer>	
